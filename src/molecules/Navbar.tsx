@@ -4,7 +4,7 @@ import { Code, DocumentAdd } from "../icons";
 export function Navbar() {
   return (
     <StyledNavbar>
-      <a href="https://github.com/alii/linear-style">
+      <a href="https://github.com/alii/linear-style/blob/main/README.md">
         <DocumentAdd /> Submit Theme
       </a>
       <a href="https://github.com/alii/linear-style">
