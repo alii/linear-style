@@ -25,6 +25,11 @@ export const GlobalStyle = createGlobalStyle`
         padding: 5vw 0;
         display: flex;
         flex-direction: column;
+        width: 80vw;
+
+        @media only screen and (max-width: 600px) {
+          width: 90vw;
+        }
     }
 
     h1.title {

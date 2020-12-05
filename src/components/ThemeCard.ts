@@ -37,17 +37,21 @@ export const ThemeCardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  width: 80vw;
   align-self: center;
 
   @media only screen and (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
-    width: 90vw;
   }
 
   @media only screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
-    width: 90vw;
+    width: 100%;
+
+    ${ThemeCard} {
+      width: 100%;
+
+      text-align: center;
+    }
   }
 `;
 
