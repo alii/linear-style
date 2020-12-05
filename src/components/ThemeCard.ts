@@ -1,7 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { getBrightness } from "../core/utils";
 
-export const ThemeCard = styled.div`
+export const ThemeCardOverlay = styled.div`
+  position: relative;
+`;
+
+export const ThemeCard = styled.div<{ dimmed: boolean }>`
   padding: 15px;
   border-radius: 8px;
   border: 2px solid ${(props) => props.theme.colors.text}05;
@@ -10,6 +14,8 @@ export const ThemeCard = styled.div`
   display: flex;
   flex-direction: column;
   background: #1b1c1d;
+  opacity: ${({ dimmed }) => (dimmed ? "0.5" : "1")};
+  transition: 0.2s opacity ease-out 0s;
 `;
 
 export const ThemeCardHeader = styled.h1<{ color: string }>`
@@ -29,5 +35,29 @@ export const ThemeCardGrid = styled.div`
   @media only screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     max-width: auto;
+  }
+`;
+
+export const ThemeCopiedLabel = styled.span`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: black;
+  z-index: 1;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 4px;
+  text-align: center;
+  animation: 0.2s labelAnimation ease-out;
+
+  @keyframes labelAnimation {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `;
