@@ -1,5 +1,4 @@
-import styled, { keyframes } from "styled-components";
-import { getBrightness } from "../core/utils";
+import styled from "styled-components";
 
 export const ThemeCardOverlay = styled.div`
   position: relative;
@@ -13,16 +12,20 @@ export const ThemeCard = styled.div<{ dimmed: boolean }>`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  background: #1b1c1d;
-  opacity: ${({ dimmed }) => (dimmed ? "0.5" : "1")};
+  height: 100%;
+  background: linear-gradient(
+    130deg,
+    ${(props) => props.theme.colors.lighterBackground},
+    ${(props) => props.theme.colors.lighterBackground}0c
+  );
+  opacity: ${({ dimmed }) => (dimmed ? 0.5 : 1)};
   transition: 0.2s opacity ease-out 0s;
 `;
 
 export const ThemeCardHeader = styled.h1<{ color: string }>`
   font-weight: 600;
   margin-bottom: 15px;
-  color: ${(props) =>
-    getBrightness(props.color) < 50 ? props.theme.colors.text : props.color};
+  opacity: 0.5;
   flex: 1;
 `;
 
