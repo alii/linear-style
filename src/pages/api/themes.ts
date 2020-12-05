@@ -9,6 +9,7 @@ const themes: Record<string, string> = {
   "Ikea": "#FFFF00,#000000,#0000FF,#FFFFFF,#0000FF,#FFFFFF",
   "StarCraft": "#191919,#D8D8D8,#121212,#D8D8D8,#4946DB,#FFFFFF",
   "Scout": "#141616,#FAFAFA,#1C1E1F,#F4F5F7,#003EFF,#FFFFFF",
+  "Discord": "#37393E,#DCDDDE,#2F3136,#DCDDDE,#768AD4,#FFFFFF",
 };
 
 export default function get(req: NowRequest, res: NowResponse) {
