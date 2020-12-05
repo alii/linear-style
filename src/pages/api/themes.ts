@@ -8,6 +8,7 @@ const themes: Record<string, string> = {
   "Barbie Dreamhouse": "#E2DAF1,#593E74,#FCDEEE,#593E74,#B8FAFA,#8B6BC7",
   "Ikea": "#FFFF00,#000000,#0000FF,#FFFFFF,#0000FF,#FFFFFF",
   "StarCraft": "#191919,#D8D8D8,#121212,#D8D8D8,#4946DB,#FFFFFF",
+  "Scout": "#141616,#FAFAFA,#1C1E1F,#F4F5F7,#003EFF,#FFFFFF",
 };
 
 export default function get(req: NowRequest, res: NowResponse) {
