@@ -25,6 +25,11 @@ export const GlobalStyle = createGlobalStyle`
         padding: 5vw 0;
         display: flex;
         flex-direction: column;
+        width: 80vw;
+
+        @media only screen and (max-width: 600px) {
+          width: 90vw;
+        }
     }
 
     h1.title {
@@ -52,5 +57,16 @@ export const GlobalStyle = createGlobalStyle`
       border-radius: 5px;
       font-family: 'Inter var', sans-serif;
       color: ${(props) => props.theme.colors.text};
+    }
+    
+    label {
+      display: flex;
+      flex-direction: column;
+      color: ${(props) => props.theme.colors.text}6c;
+      font-size: 12px;
+      
+      input {
+        margin-top: 5px;
+      }
     }
 `;
