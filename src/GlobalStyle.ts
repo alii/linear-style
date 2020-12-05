@@ -43,4 +43,14 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         font-size: 22px;
     }
+    
+    input {
+      margin-bottom: 25px;
+      padding: 10px 20px;
+      background: transparent;
+      border: 3px solid ${(props) => props.theme.colors.lighterBackground};
+      border-radius: 5px;
+      font-family: 'Inter var', sans-serif;
+      color: ${(props) => props.theme.colors.text};
+    }
 `;

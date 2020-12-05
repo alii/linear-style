@@ -10,6 +10,11 @@ export function useInputFilter<T>(
   items?: T[]
 ) {
   const [state, setState] = useState("");
-  const filtered = items.filter((item, index) => predicate(item, index, state));
+
+  const filtered =
+    state.trim() === ""
+      ? items
+      : items.filter((item, index) => predicate(item, index, state));
+
   return { state, setState, filtered };
 }
