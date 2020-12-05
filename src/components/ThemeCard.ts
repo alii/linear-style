@@ -9,6 +9,11 @@ export const ThemeCard = styled.div`
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  transition: 200ms ease-in-out;
+
+  :hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const ThemeCardHeader = styled.h1<{ color: string }>`
