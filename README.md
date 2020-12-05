@@ -1,6 +1,6 @@
 ## `linear-style`
 
-#### An index for Linear appThemes
+#### An index for Linear Themes
 
 > Contributing
 
