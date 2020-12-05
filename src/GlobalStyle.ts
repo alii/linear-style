@@ -22,13 +22,25 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     div.app {
-        padding: 10vw 0;
+        padding: 5vw 0;
+        display: flex;
+        flex-direction: column;
     }
 
     h1.title {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 0.4em;
         font-weight: 800;
-        font-size: 500%;
+        font-size: 65px;
+        color: white;
+        
+    }
+
+    span.subtitle {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #8A8F98;
+        font-weight: 500;
+        font-size: 22px;
     }
 `;

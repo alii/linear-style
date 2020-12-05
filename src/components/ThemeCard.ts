@@ -3,12 +3,13 @@ import { getBrightness } from "../core/utils";
 
 export const ThemeCard = styled.div`
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 2px solid ${(props) => props.theme.colors.text}05;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 13px 40px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  background: #1b1c1d;
 `;
 
 export const ThemeCardHeader = styled.h1<{ color: string }>`
