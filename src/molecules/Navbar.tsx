@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Code, DocumentAdd } from "../icons";
+import { Code, DocumentAdd } from "../components/icons";
 
 export function Navbar() {
   return (

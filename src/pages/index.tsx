@@ -37,12 +37,7 @@ export default function Index() {
     <div className="app">
       <h1 className="title">Linear Style</h1>
       <span className="subtitle">Click on a theme to copy it.</span>
-      <input
-        type="text"
-        value={state}
-        onChange={(e) => setState(e.target.value)}
-        placeholder={"Search..."}
-      />
+      <input type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder={"Search..."} />
       <ThemeCardGrid>
         {filtered.map((theme) => {
           return <Theme key={JSON.stringify(theme)} theme={theme} />;
