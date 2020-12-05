@@ -6,6 +6,7 @@ const themes: Record<string, string> = {
   "Dawn": "#2A222E,#EEEFF1,#382A3C,#EEEFF1,#A84376,#FFFFFF",
   "Pale": "#292D3E,#EEEFF1,#292D3E,#EEEFF1,#7D57C1,#FFFFFF",
   "Barbie Dreamhouse": "#E2DAF1,#593E74,#FCDEEE,#593E74,#B8FAFA,#8B6BC7",
+  "Ikea": "#FFFF00,#000000,#0000FF,#FFFFFF,#0000FF,#FFFFFF",
 };
 
 export default function get(req: NowRequest, res: NowResponse) {
