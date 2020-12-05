@@ -13,6 +13,7 @@ const themes: Record<string, string> = {
   "Gamelib Dark": "#111016,#9EABB8,#1f1f20,#FFFFFF,#C7AA51,#17161F",
   "Gamelib Amethyst": "#190f2a,#9EABB8,#2e1e47,#FFFFFF,#7E51C7,#17161F",
   "Slack Light": "#FFFFFF,#616061,#400E40,#CFC2CF,#400E40,#FFFFFF",
+  "Spotify": "#181818,#DCDDDE,#121212,#DCDDDE,#1CB954,#FFFFFF",
 };
 
 export default function get(req: NowRequest, res: NowResponse) {
