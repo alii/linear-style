@@ -20,7 +20,11 @@ export const ThemeCard = styled.div<{ dimmed: boolean }>`
     ${(props) => props.theme.colors.lighterBackground}0c
   );
   opacity: ${({ dimmed }) => (dimmed ? 0.5 : 1)};
-  transition: 0.2s opacity ease-out 0s;
+  transition: 0.2s opacity ease-out 0s, 200ms transform ease-out 0s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const ThemeCardHeader = styled.h1`
