@@ -7,6 +7,7 @@ export const ThemeCardOverlay = styled.div`
 export const ThemeCard = styled.div<{ dimmed: boolean }>`
   padding: 15px;
   border-radius: 8px;
+  padding-bottom: 20px;
   border: 2px solid ${(props) => props.theme.colors.text}05;
   box-shadow: 0px 13px 40px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -22,7 +23,7 @@ export const ThemeCard = styled.div<{ dimmed: boolean }>`
   transition: 0.2s opacity ease-out 0s;
 `;
 
-export const ThemeCardHeader = styled.h1<{ color: string }>`
+export const ThemeCardHeader = styled.h1`
   font-weight: 600;
   margin-bottom: 15px;
   opacity: 0.5;

@@ -31,15 +31,15 @@ export function Theme({ theme }: { theme: [string, string] }) {
     <ThemeCardOverlay>
       {copying && <ThemeCopiedLabel>✓ Copied!</ThemeCopiedLabel>}
       <ThemeCard onClick={copy} dimmed={copying}>
-        <ThemeCardHeader color={text}>{name}</ThemeCardHeader>
+        <ThemeCardHeader>{name}</ThemeCardHeader>
 
         {[
           background,
-          text,
           sidebarBackground,
           sidebarText,
-          accent,
+          text,
           accentText,
+          accent,
         ].map((color) => {
           return <ColorDisplay key={color} color={color} />;
         })}
