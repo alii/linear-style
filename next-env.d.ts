@@ -2,8 +2,8 @@
 /// <reference types="next/types/global" />
 
 import "styled-components";
-import { Theme } from "./src/themes";
+import { AppTheme } from "./src/app-themes";
 
 declare module "styled-components" {
-  export interface DefaultTheme extends Theme {}
+  export interface DefaultTheme extends AppTheme {}
 }

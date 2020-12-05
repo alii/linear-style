@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { ThemeProvider } from "styled-components";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { themes } from "../themes";
+import { appThemes } from "../app-themes";
 import { GlobalStyle } from "../GlobalStyle";
 import { Navbar } from "../molecules/Navbar";
 
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
           content="Find and share great UI themes for Linear with linear.style"
         />
       </Head>
-      <ThemeProvider theme={themes.dark}>
+      <ThemeProvider theme={appThemes.dark}>
         <GlobalStyle />
         <Navbar />
         <Component {...pageProps} />

@@ -1,6 +1,6 @@
-export const themeNames = ["dark"] as const;
+export const appThemeNames = ["dark"] as const;
 
-export type Theme = {
+export type AppTheme = {
   colors: {
     background: string;
     text: string;
@@ -8,7 +8,7 @@ export type Theme = {
   };
 };
 
-export const themes: Record<typeof themeNames[number], Theme> = {
+export const appThemes: Record<typeof appThemeNames[number], AppTheme> = {
   dark: {
     colors: {
       background: "#121212",
