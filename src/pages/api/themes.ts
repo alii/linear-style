@@ -17,6 +17,7 @@ const themes: Record<string, string> = {
   "Spotify": "#181818,#DCDDDE,#121212,#DCDDDE,#1CB954,#FFFFFF",
   "Zyndicate": "#212121,#DCDDDE,#353535,#DCDDDE,#3854FC,#FFFFFF",
   "Edge": "#F9F9F9,#1E2052,#FFFFFF,#828282,#4A53D7,#FFFFFF"
+  "Vercel": "#000000,#CCCCCC,#111111,#888888,#3290FF,#FFFFFF",
 };
 
 export default function get(req: NowRequest, res: NowResponse) {
