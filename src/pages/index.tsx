@@ -1,18 +1,31 @@
 import { ThemeCardGrid } from "../components/ThemeCard";
-import { useLinearThemes } from "../core/hooks";
+import { useInputFilter, useLinearThemes } from "../core/hooks";
 import { Theme } from "../molecules/Theme";
 
 export default function Index() {
   const { data: themes } = useLinearThemes();
 
-  if (!themes) return <div>Loading</div>;
+  const entries = Object.entries(themes ?? {});
+
+  const { state, setState, filtered } = useInputFilter((theme, i, s) => {
+    const [name] = theme;
+    return s.includes(name);
+  }, entries);
+
+  if (!themes)
+    return (
+      <div className="app">
+        <h1 className={"title"}>Loading</h1>
+        <span className="subtitle">Fetching the latest themes</span>
+      </div>
+    );
 
   return (
     <div className="app">
       <h1 className="title">Linear Style</h1>
       <span className="subtitle">Click on a theme to copy it.</span>
       <ThemeCardGrid>
-        {Object.entries(themes).map((theme) => {
+        {entries.map((theme) => {
           return <Theme theme={theme} />;
         })}
       </ThemeCardGrid>
