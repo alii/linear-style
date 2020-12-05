@@ -24,6 +24,7 @@ export const StyledNavbar = styled.div`
     color: ${(props) => props.theme.colors.text}5c;
     align-items: center;
     margin-right: 25px;
+    transition: 200ms ease-out 0s;
 
     &:hover {
       color: ${(props) => props.theme.colors.text}ff;
