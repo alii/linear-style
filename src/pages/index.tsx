@@ -8,8 +8,9 @@ export default function Index() {
   if (!themes) return <div>Loading</div>;
 
   return (
-    <div className={"app"}>
-      <h1 className={"title"}>Linear Style</h1>
+    <div className="app">
+      <h1 className="title">Linear Style</h1>
+      <span className="subtitle">Click on a theme to copy it.</span>
       <ThemeCardGrid>
         {Object.entries(themes).map((theme) => {
           return <Theme theme={theme} />;
