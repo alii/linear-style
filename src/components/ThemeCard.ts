@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { getBrightness } from "../core/utils";
 
 export const ThemeCard = styled.div`
   padding: 15px;
@@ -13,7 +14,8 @@ export const ThemeCard = styled.div`
 export const ThemeCardHeader = styled.h1<{ color: string }>`
   font-weight: 600;
   margin-bottom: 15px;
-  color: ${(props) => props.color};
+  color: ${(props) =>
+    getBrightness(props.color) < 50 ? props.theme.colors.text : props.color};
   flex: 1;
 `;
 

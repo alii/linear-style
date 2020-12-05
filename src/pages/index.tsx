@@ -1,11 +1,5 @@
-import { ColorDisplay } from "../components/ColorDisplay";
-import {
-  ThemeCard,
-  ThemeCardGrid,
-  ThemeCardHeader,
-} from "../components/ThemeCard";
+import { ThemeCardGrid } from "../components/ThemeCard";
 import { useLinearThemes } from "../core/hooks";
-import { Navbar } from "../molecules/Navbar";
 import { Theme } from "../molecules/Theme";
 
 export default function Index() {
