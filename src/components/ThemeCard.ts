@@ -38,6 +38,7 @@ export const ThemeCardGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   align-self: center;
+  width: 100%;
 
   @media only screen and (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
@@ -45,11 +46,9 @@ export const ThemeCardGrid = styled.div`
 
   @media only screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
-    width: 100%;
 
     ${ThemeCard} {
       width: 100%;
-
       text-align: center;
     }
   }
