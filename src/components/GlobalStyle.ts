@@ -53,4 +53,15 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Inter var', sans-serif;
       color: ${(props) => props.theme.colors.text};
     }
+    
+    label {
+      display: flex;
+      flex-direction: column;
+      color: ${(props) => props.theme.colors.text}6c;
+      font-size: 12px;
+      
+      input {
+        margin-top: 5px;
+      }
+    }
 `;

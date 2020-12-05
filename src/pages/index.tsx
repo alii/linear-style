@@ -28,7 +28,7 @@ export default function Index() {
   if (!themes)
     return (
       <div className="app">
-        <h1 className={"title"}>Loading</h1>
+        <h1 className={"title"}>Linear Style</h1>
         <span className="subtitle">Fetching the latest themes</span>
       </div>
     );
@@ -37,7 +37,10 @@ export default function Index() {
     <div className="app">
       <h1 className="title">Linear Style</h1>
       <span className="subtitle">Click on a theme to copy it.</span>
-      <input type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder={"Search..."} />
+      <label>
+        Tip: Search for "light" or "dark"
+        <input type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder={"Search..."} />
+      </label>
       <ThemeCardGrid>
         {filtered.map((theme) => {
           return <Theme key={JSON.stringify(theme)} theme={theme} />;
