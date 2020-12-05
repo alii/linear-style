@@ -10,6 +10,8 @@ const themes: Record<string, string> = {
   "StarCraft": "#191919,#D8D8D8,#121212,#D8D8D8,#4946DB,#FFFFFF",
   "Scout": "#141616,#FAFAFA,#1C1E1F,#F4F5F7,#003EFF,#FFFFFF",
   "Discord": "#37393E,#DCDDDE,#2F3136,#DCDDDE,#768AD4,#FFFFFF",
+  "Gamelib Dark": "#111016,#9EABB8,#1f1f20,#FFFFFF,#C7AA51,#17161F",
+  "Gamelib Amethyst": "#190f2a,#9EABB8,#2e1e47,#FFFFFF,#7E51C7,#17161F",
 };
 
 export default function get(req: NowRequest, res: NowResponse) {
