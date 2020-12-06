@@ -39,10 +39,10 @@ export default function Index() {
       <span className="subtitle">Click on a theme to copy it.</span>
       <label>
         Tip: Search for "light" or "dark"
-        <input type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder={"Search..."} />
+        <input type="text" value={state} onChange={e => setState(e.target.value)} placeholder={"Search..."} />
       </label>
       <ThemeCardGrid>
-        {filtered.map((theme) => {
+        {filtered.map(theme => {
           return <Theme key={JSON.stringify(theme)} theme={theme} />;
         })}
       </ThemeCardGrid>

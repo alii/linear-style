@@ -9,7 +9,7 @@ export function Theme({ theme }: { theme: [string, string] }) {
   async function copy() {
     setCopying(true);
     await navigator.clipboard.writeText(colors);
-    await new Promise((r) => setTimeout(r, 1500));
+    await new Promise(r => setTimeout(r, 1500));
     setCopying(false);
   }
 
@@ -21,7 +21,7 @@ export function Theme({ theme }: { theme: [string, string] }) {
       <ThemeCard onClick={copy} dimmed={copying}>
         <ThemeCardHeader>{name}</ThemeCardHeader>
 
-        {[background, sidebarBackground, sidebarText, text, accentText, accent].map((color) => {
+        {[background, sidebarBackground, sidebarText, text, accentText, accent].map(color => {
           return <ColorDisplay key={color} color={color} />;
         })}
       </ThemeCard>
