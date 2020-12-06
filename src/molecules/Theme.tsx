@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ColorDisplay } from "../components/ColorDisplay";
-import { ThemeCard, ThemeCardHeader } from "../components/ThemeCard";
+import { ThemeCard, ThemeCardHeader, ThemeCardOverlay, ThemeCopiedLabel } from "../components/ThemeCard";
 
 export function Theme({ theme }: { theme: [string, string] }) {
   const [copying, setCopying] = useState(false);
@@ -13,30 +13,18 @@ export function Theme({ theme }: { theme: [string, string] }) {
     setCopying(false);
   }
 
-  const [
-    background,
-    text,
-    sidebarBackground,
-    sidebarText,
-    accent,
-    accentText,
-  ] = colors.split(",");
+  const [background, text, sidebarBackground, sidebarText, accent, accentText] = colors.split(",");
 
   return (
-    <ThemeCard onClick={copy}>
-      <ThemeCardHeader color={text}>
-        {copying ? "Copied!" : name}
-      </ThemeCardHeader>
-      {[
-        background,
-        text,
-        sidebarBackground,
-        sidebarText,
-        accent,
-        accentText,
-      ].map((color) => {
-        return <ColorDisplay key={color} color={color} />;
-      })}
-    </ThemeCard>
+    <ThemeCardOverlay>
+      {copying && <ThemeCopiedLabel>✓ Copied!</ThemeCopiedLabel>}
+      <ThemeCard onClick={copy} dimmed={copying}>
+        <ThemeCardHeader>{name}</ThemeCardHeader>
+
+        {[background, sidebarBackground, sidebarText, text, accentText, accent].map((color) => {
+          return <ColorDisplay key={color} color={color} />;
+        })}
+      </ThemeCard>
+    </ThemeCardOverlay>
   );
 }

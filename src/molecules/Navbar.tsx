@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Code, DocumentAdd } from "../icons";
+import { Code, DocumentAdd } from "../components/icons";
 
 export function Navbar() {
   return (
     <StyledNavbar>
       <a href="https://github.com/alii/linear-style/blob/main/README.md">
-        <DocumentAdd /> Submit Theme
+        <DocumentAdd /> Submit
       </a>
       <a href="https://github.com/alii/linear-style">
         <Code /> GitHub
@@ -18,16 +18,20 @@ export const StyledNavbar = styled.div`
   @media only screen and (max-width: 600px) {
     text-align: center;
   }  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   a {
     padding: 10px;
-    padding-left: 0;
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
     color: ${(props) => props.theme.colors.text}5c;
     align-items: center;
-    margin-right: 25px;
+    transition: 200ms ease-out 0s;
+    margin: 0 10px;
 
     &:hover {
       color: ${(props) => props.theme.colors.text}ff;
