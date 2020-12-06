@@ -38,7 +38,7 @@ export default function Index() {
       <h1 className="title">Linear Style</h1>
       <span className="subtitle">Click on a theme to copy it. Then, paste into your Linear.</span>
       <h3 className="learnMore">
-        Learn more <a href="">here.</a>
+        Learn more <a href="https://github.com/alii/linear-style/blob/main/README.md">here.</a>
       </h3>
       <label>
         Tip: Search for "light" or "dark".
