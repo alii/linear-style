@@ -5,11 +5,10 @@ export const ThemeCardOverlay = styled.div`
 `;
 
 export const ThemeCard = styled.div<{ dimmed: boolean }>`
-  padding: 15px;
   border-radius: 8px;
-  padding-bottom: 20px;
+  padding: 15px 15px 20px;
   border: 2px solid ${(props) => props.theme.colors.text}05;
-  box-shadow: 0px 13px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 13px 40px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -20,10 +19,10 @@ export const ThemeCard = styled.div<{ dimmed: boolean }>`
     ${(props) => props.theme.colors.lighterBackground}0c
   );
   opacity: ${({ dimmed }) => (dimmed ? 0.5 : 1)};
-  transition: 0.2s opacity ease-out 0s, 200ms transform ease-out 0s;
+  transition: 0.2s opacity ease-out 0s, transform ease-out 0.2s;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.01) translateY(-4px);
   }
 `;
 
@@ -38,17 +37,20 @@ export const ThemeCardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  max-width: 80vw;
   align-self: center;
+  width: 100%;
 
   @media only screen and (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
-    max-width: auto;
   }
 
   @media only screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
-    width: 90vw;
+
+    ${ThemeCard} {
+      width: 100%;
+      text-align: center;
+    }
   }
 `;
 
