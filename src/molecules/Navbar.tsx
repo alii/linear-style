@@ -15,6 +15,10 @@ export function Navbar() {
 }
 
 export const StyledNavbar = styled.div`
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+  }  
+  
   display: flex;
   align-items: center;
   justify-content: center;
