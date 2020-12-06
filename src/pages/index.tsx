@@ -50,7 +50,7 @@ export default function Index() {
         />
       </label>
       <ThemeCardGrid>
-        {filtered.map((theme) => {
+        {filtered.map(theme => {
           return <Theme key={JSON.stringify(theme)} theme={theme} />;
         })}
       </ThemeCardGrid>
