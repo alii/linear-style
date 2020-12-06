@@ -22,6 +22,7 @@ export const StyledNavbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 
   a {
     padding: 10px;

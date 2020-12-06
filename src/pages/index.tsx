@@ -2,6 +2,8 @@ import { ThemeCardGrid } from "../components/ThemeCard";
 import { useInputFilter, useLinearThemes } from "../core/hooks";
 import { Theme } from "../molecules/Theme";
 import { getBrightness } from "../core/utils";
+import { Title, Subtitle, LearnMore, Link } from "../components/Headers";
+import { SearchInput } from "../components/SearchInput";
 
 export default function Index() {
   const { data: themes } = useLinearThemes();
@@ -9,6 +11,7 @@ export default function Index() {
   const entries = Object.entries(themes ?? {});
 
   const { state, setState, filtered } = useInputFilter((theme, i, s) => {
+    ``;
     const [name, colors] = theme;
     s = s.toLowerCase();
 
@@ -28,18 +31,26 @@ export default function Index() {
   if (!themes)
     return (
       <div className="app">
-        <h1 className={"title"}>Linear Style</h1>
-        <span className="subtitle">Fetching the latest themes</span>
+        <Title>Linear Style</Title>
+        <Subtitle>🧪 Hold up! Fetching the latest themes...</Subtitle>
       </div>
     );
 
   return (
     <div className="app">
-      <h1 className="title">Linear Style</h1>
-      <span className="subtitle">Click on a theme to copy it.</span>
+      <Title>Linear Style</Title>
+      <Subtitle>Click on a theme to copy it.</Subtitle>
+      <LearnMore>
+        Learn more <Link href="https://github.com/alii/linear-style/blob/main/README.md">here.</Link>
+      </LearnMore>
       <label>
-        Tip: Search for "light" or "dark"
-        <input type="text" value={state} onChange={e => setState(e.target.value)} placeholder={"Search..."} />
+        Tip: Search for "light" or "dark".
+        <SearchInput
+          type="text"
+          value={state}
+          onChange={e => setState(e.target.value)}
+          placeholder={"Search for themes.."}
+        />
       </label>
       <ThemeCardGrid>
         {filtered.map(theme => {
