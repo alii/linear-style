@@ -43,10 +43,23 @@ export const GlobalStyle = createGlobalStyle`
 
     span.subtitle {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         color: #8A8F98;
         font-weight: 500;
         font-size: 22px;
+    }
+
+    h3.learnMore {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #8A8F98;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    h3 a {
+      color: #5d6ad0;
+      text-decoration: none;
     }
     
     input {
@@ -57,6 +70,7 @@ export const GlobalStyle = createGlobalStyle`
       border-radius: 5px;
       font-family: 'Inter var', sans-serif;
       color: ${(props) => props.theme.colors.text};
+      outline: none;
     }
     
     label {
@@ -67,6 +81,7 @@ export const GlobalStyle = createGlobalStyle`
       
       input {
         margin-top: 5px;
+        outline: none;
       }
     }
 `;

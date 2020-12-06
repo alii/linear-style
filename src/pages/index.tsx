@@ -29,17 +29,25 @@ export default function Index() {
     return (
       <div className="app">
         <h1 className={"title"}>Linear Style</h1>
-        <span className="subtitle">Fetching the latest themes</span>
+        <span className="subtitle">🧪 Hold up! Fetching the latest themes...</span>
       </div>
     );
 
   return (
     <div className="app">
       <h1 className="title">Linear Style</h1>
-      <span className="subtitle">Click on a theme to copy it.</span>
+      <span className="subtitle">Click on a theme to copy it. Then, paste into your Linear.</span>
+      <h3 className="learnMore">
+        Learn more <a href="">here.</a>
+      </h3>
       <label>
-        Tip: Search for "light" or "dark"
-        <input type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder={"Search..."} />
+        Tip: Search for "light" or "dark".
+        <input
+          type="text"
+          value={state}
+          onChange={(e) => setState(e.target.value)}
+          placeholder={"Search for themes.."}
+        />
       </label>
       <ThemeCardGrid>
         {filtered.map((theme) => {
