@@ -12,6 +12,8 @@ export default function Index() {
     const [name, colors] = theme;
     s = s.toLowerCase();
 
+  console.log(theme)    
+
     if ("light".includes(s)) {
       const [background] = colors.split(",");
       return getBrightness(background) > 50;
@@ -24,7 +26,7 @@ export default function Index() {
 
     return (colors + name).toLowerCase().includes(s);
   }, entries);
-
+  
   if (!themes)
     return (
       <div className="app">
