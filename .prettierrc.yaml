@@ -1,9 +1,0 @@
-singleQuote: false
-semi: true
-jsxSingleQuote: false
-tabWidth: 4
-useTabs: false
-bracketSpacing: true
-arrowParens: avoid
-trailingComma: es5
-proseWrap: preserve
