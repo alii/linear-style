@@ -11,6 +11,7 @@ export default function Index() {
   const entries = Object.entries(themes ?? {});
 
   const { state, setState, filtered } = useInputFilter((theme, i, s) => {
+    ``;
     const [name, colors] = theme;
     s = s.toLowerCase();
 

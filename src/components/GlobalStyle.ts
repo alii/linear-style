@@ -47,6 +47,19 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 500;
       font-size: 22px;
     }
+
+    h3.learnMore {
+        text-align: center;
+        margin-bottom: 50px;
+        color: #8A8F98;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    h3 a {
+      color: #5d6ad0;
+      text-decoration: none;
+    }
     
     input {
       margin-bottom: 25px;
@@ -55,6 +68,7 @@ export const GlobalStyle = createGlobalStyle`
       border: 3px solid ${props => props.theme.colors.lighterBackground};
       border-radius: 5px;
       font-family: 'Inter var', sans-serif;
+      outline: none;
       color: ${props => props.theme.colors.text};
     }
     
@@ -66,6 +80,7 @@ export const GlobalStyle = createGlobalStyle`
       
       input {
         margin-top: 5px;
+        outline: none;
       }
     }
 `;
