@@ -12,8 +12,6 @@ export default function Index() {
     const [name, colors] = theme;
     s = s.toLowerCase();
 
-  console.log(theme)    
-
     if ("light".includes(s)) {
       const [background] = colors.split(",");
       return getBrightness(background) > 50;
@@ -26,7 +24,7 @@ export default function Index() {
 
     return (colors + name).toLowerCase().includes(s);
   }, entries);
-  
+
   if (!themes)
     return (
       <div className="app">
@@ -41,10 +39,10 @@ export default function Index() {
       <span className="subtitle">Click on a theme to copy it.</span>
       <label>
         Tip: Search for "light" or "dark"
-        <input type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder={"Search..."} />
+        <input type="text" value={state} onChange={e => setState(e.target.value)} placeholder={"Search..."} />
       </label>
       <ThemeCardGrid>
-        {filtered.map((theme) => {
+        {filtered.map(theme => {
           return <Theme key={JSON.stringify(theme)} theme={theme} />;
         })}
       </ThemeCardGrid>

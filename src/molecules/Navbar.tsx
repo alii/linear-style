@@ -28,13 +28,13 @@ export const StyledNavbar = styled.div`
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
-    color: ${(props) => props.theme.colors.text}5c;
+    color: ${props => props.theme.colors.text}5c;
     align-items: center;
     transition: 200ms ease-out 0s;
     margin: 0 10px;
 
     &:hover {
-      color: ${(props) => props.theme.colors.text}ff;
+      color: ${props => props.theme.colors.text}ff;
     }
 
     svg {
