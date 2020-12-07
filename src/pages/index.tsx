@@ -3,7 +3,8 @@ import { useInputFilter, useLinearThemes } from "../core/hooks";
 import { Theme } from "../molecules/Theme";
 import { getBrightness } from "../core/utils";
 import { Title, Subtitle, LearnMore, Link } from "../components/Headers";
-import { SearchInput } from "../components/SearchInput";
+import { SearchInput, SearchLabel } from "../components/SearchInput";
+import React from "react";
 
 export default function Index() {
   const { data: themes } = useLinearThemes();
@@ -43,7 +44,7 @@ export default function Index() {
       <LearnMore>
         Learn more <Link href="https://github.com/alii/linear-style/blob/main/README.md">here.</Link>
       </LearnMore>
-      <label>
+      <SearchLabel>
         Tip: Search for "light" or "dark".
         <SearchInput
           type="text"
@@ -51,7 +52,7 @@ export default function Index() {
           onChange={e => setState(e.target.value)}
           placeholder={"Search for themes.."}
         />
-      </label>
+      </SearchLabel>
       <ThemeCardGrid>
         {filtered.map(theme => {
           return <Theme key={JSON.stringify(theme)} theme={theme} />;
