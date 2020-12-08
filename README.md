@@ -11,18 +11,18 @@ To add a theme to `linear-style` is fairly simple. If you head to `/src/themes.j
 In order to add a theme to your Linear app, you must follow this process:
 
 
-1. Copy the color string
+**1. Copy the color string**
 
 Click on the theme's respective card; it should automatically copy the theme to your clipboard.
 
-<img src="https://i.ibb.co/PwP5fwN/Screen-Shot-2020-12-08-at-12-24-50.png" />
+<img width="300" src="https://i.ibb.co/PwP5fwN/Screen-Shot-2020-12-08-at-12-24-50.png" />
 
-2. Insert in Linear
+**2. Insert in Linear**
 
-Go to Settings -> Preferences -> Theme and select *Custom* from the theme options swatch.
+On Linear, go to Settings -> Preferences -> Theme and select *Custom* from the theme options swatch.
 
-<img src="https://i.ibb.co/ZV7TFQS/Screen-Shot-2020-12-08-at-12-27-47.png" />
+<img width="800" src="https://i.ibb.co/ZV7TFQS/Screen-Shot-2020-12-08-at-12-27-47.png" />
 
 Then, paste the theme copied from linear-style into the custom text box input, as such:
 
-<img src="https://i.ibb.co/mDwC0pX/Screen-Shot-2020-12-08-at-12-29-14.png" />
+<img width="800" src="https://i.ibb.co/mDwC0pX/Screen-Shot-2020-12-08-at-12-29-14.png" />
