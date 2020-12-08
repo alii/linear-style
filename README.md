@@ -19,7 +19,7 @@ Click on the theme's respective card; it should automatically copy the theme to 
 
 **2. Insert in Linear**
 
-On Linear, go to Settings -> Preferences -> Theme and select *Custom* from the theme options swatch.
+On Linear, go to Settings -> Preferences -> Theme and select *Custom* from the interface options swatch.
 
 <img width="800" src="https://i.ibb.co/ZV7TFQS/Screen-Shot-2020-12-08-at-12-27-47.png" />
 
