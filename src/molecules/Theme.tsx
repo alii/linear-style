@@ -18,7 +18,7 @@ export function Theme({ theme }: { theme: [string, string] }) {
   return (
     <ThemeCardOverlay>
       {copying && <ThemeCopiedLabel>✓ Copied!</ThemeCopiedLabel>}
-      <ThemeCard onClick={copy} dimmed={copying}>
+      <ThemeCard onClick={copy} dimmed={copying} background={background}>
         <ThemeCardHeader>{name}</ThemeCardHeader>
 
         {[background, sidebarBackground, sidebarText, text, accentText, accent].map(color => {

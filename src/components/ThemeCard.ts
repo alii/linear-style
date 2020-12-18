@@ -4,20 +4,16 @@ export const ThemeCardOverlay = styled.div`
   position: relative;
 `;
 
-export const ThemeCard = styled.div<{ dimmed: boolean }>`
+export const ThemeCard = styled.div<{ dimmed: boolean; background: string }>`
   border-radius: 8px;
   padding: 15px 15px 20px;
-  border: 2px solid ${props => props.theme.colors.text}05;
+  border: 2px solid ${props => props.theme.colors.lighterBackground};
   box-shadow: 0 13px 40px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: linear-gradient(
-    130deg,
-    ${props => props.theme.colors.lighterBackground},
-    ${props => props.theme.colors.lighterBackground}0c
-  );
+  background: linear-gradient(130deg, ${p => p.background}6c, ${props => props.theme.colors.lighterBackground});
   opacity: ${({ dimmed }) => (dimmed ? 0.5 : 1)};
   transition: 0.2s opacity ease-out 0s, transform ease-out 0.2s;
 
