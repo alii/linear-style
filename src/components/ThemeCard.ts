@@ -6,7 +6,7 @@ export const ThemeCardOverlay = styled.div`
 
 export const ThemeCard = styled.div<{ dimmed: boolean; background: string }>`
   border-radius: 8px;
-  padding: 15px 15px 20px;
+  padding: 15px;
   border: 2px solid ${props => props.theme.colors.lighterBackground};
   box-shadow: 0 13px 40px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -27,6 +27,7 @@ export const ThemeCardHeader = styled.h1`
   margin-bottom: 15px;
   opacity: 0.5;
   flex: 1;
+  text-align: center;
 `;
 
 export const ThemeCardGrid = styled.div`
