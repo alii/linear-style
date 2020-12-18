@@ -8,10 +8,10 @@ export const Title = styled.h1`
   color: white;
 `;
 
-export const Subtitle = styled.span`
+export const Subtitle = styled.h2`
   text-align: center;
   margin-bottom: 20px;
-  color: #8a8f98;
+  color: ${p => p.theme.colors.text}c0;
   font-weight: 500;
   font-size: 22px;
 `;
@@ -19,12 +19,13 @@ export const Subtitle = styled.span`
 export const LearnMore = styled.h3`
   text-align: center;
   margin-bottom: 50px;
-  color: #8a8f98;
+  color: ${p => p.theme.colors.text}c0;
   font-weight: 500;
   font-size: 18px;
 `;
 
 export const Link = styled.a`
-  color: #5d6ad0;
+  color: ${p => p.theme.colors.accent};
   text-decoration: none;
+  font-weight: bold;
 `;

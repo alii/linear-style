@@ -5,6 +5,7 @@ export type AppTheme = {
     background: string;
     text: string;
     lighterBackground: string;
+    accent: string;
   };
 };
 
@@ -14,6 +15,7 @@ export const appThemes: Record<typeof appThemeNames[number], AppTheme> = {
       background: "#121212",
       text: "#cccccc",
       lighterBackground: "#1b1c1d",
+      accent: "#848CD0",
     },
   },
 };

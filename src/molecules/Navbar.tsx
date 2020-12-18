@@ -17,8 +17,8 @@ export function Navbar() {
 export const StyledNavbar = styled.div`
   @media only screen and (max-width: 600px) {
     text-align: center;
-  }  
-  
+  }
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,7 @@ export const StyledNavbar = styled.div`
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
-    color: ${props => props.theme.colors.text}5c;
+    color: ${props => props.theme.colors.text}c0;
     align-items: center;
     transition: 200ms ease-out 0s;
     margin: 0 10px;

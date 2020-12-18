@@ -15,6 +15,6 @@ export const SearchInput = styled.input`
 export const SearchLabel = styled.label`
   display: flex;
   flex-direction: column;
-  color: ${props => props.theme.colors.text}6c;
+  color: ${props => props.theme.colors.text}9c;
   font-size: 12px;
 `;
