@@ -1,18 +1,22 @@
+import React from "react";
 import { ThemeCardGrid } from "../components/ThemeCard";
 import { useInputFilter, useLinearThemes } from "../core/hooks";
 import { Theme } from "../molecules/Theme";
 import { getBrightness } from "../core/utils";
 import { Title, Subtitle, LearnMore, Link } from "../components/Headers";
 import { SearchInput, SearchLabel } from "../components/SearchInput";
-import React from "react";
+import { GetStaticProps } from "next";
 
-export default function Index() {
-  const { data: themes } = useLinearThemes();
+import themes from "../themes.json";
 
-  const entries = Object.entries(themes ?? {});
+type IndexProps = {
+  themes: Record<string, string>;
+};
+
+export default function Index(props: IndexProps) {
+  const { data: themes } = useLinearThemes(props.themes);
 
   const { state, setState, filtered } = useInputFilter((theme, i, s) => {
-    ``;
     const [name, colors] = theme;
     s = s.toLowerCase();
 
@@ -27,15 +31,7 @@ export default function Index() {
     }
 
     return (colors + name).toLowerCase().includes(s);
-  }, entries);
-
-  if (!themes)
-    return (
-      <div className="app">
-        <Title>Linear Style</Title>
-        <Subtitle>🧪 Hold up! Fetching the latest themes...</Subtitle>
-      </div>
-    );
+  }, Object.entries(themes));
 
   return (
     <div className="app">
@@ -61,3 +57,9 @@ export default function Index() {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps<IndexProps> = function () {
+  return Promise.resolve({
+    props: { themes },
+  });
+};
