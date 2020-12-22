@@ -4144,6 +4144,11 @@ use-subscription@1.5.1:
   dependencies:
     object-assign "^4.1.1"
 
+use-system-theme@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/use-system-theme/-/use-system-theme-0.1.1.tgz#d2fde1e7e31f4dffe32b05317a6742c691b3b045"
+  integrity sha512-R2Y10XUacgoj8NgZzq7o/XW1EYHBAGKiOivnVviL9s3QKfcx2R2yNtfpFh85W6066K6CZgDizKl/NdecqlN9sQ==
+
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"

@@ -7,13 +7,13 @@ export const ThemeCardOverlay = styled.div`
 export const ThemeCard = styled.div<{ dimmed: boolean; background: string }>`
   border-radius: 8px;
   padding: 15px;
-  border: 2px solid ${props => props.theme.colors.lighterBackground};
-  box-shadow: 0 13px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid ${props => props.theme.colors.alternateBackground};
+  box-shadow: 0 10px 40px ${props => props.theme.colors.background};
   cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: linear-gradient(130deg, ${p => p.background}6c, ${props => props.theme.colors.lighterBackground});
+  background: linear-gradient(130deg, ${p => p.background}2c, ${props => props.theme.colors.alternateBackground});
   opacity: ${({ dimmed }) => (dimmed ? 0.5 : 1)};
   transition: 0.2s opacity ease-out 0s, transform ease-out 0.2s;
 
@@ -25,7 +25,7 @@ export const ThemeCard = styled.div<{ dimmed: boolean; background: string }>`
 export const ThemeCardHeader = styled.h1`
   font-weight: 600;
   margin-bottom: 15px;
-  opacity: 0.5;
+  opacity: 0.7;
   flex: 1;
   text-align: center;
 `;
@@ -57,7 +57,7 @@ export const ThemeCopiedLabel = styled.span`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background: black;
+  background: ${props => props.theme.colors.alternateBackground};
   z-index: 1;
   padding: 15px 30px;
   font-size: 18px;

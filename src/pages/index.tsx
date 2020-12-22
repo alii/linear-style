@@ -51,7 +51,8 @@ export default function Index(props: IndexProps) {
       </SearchLabel>
       <ThemeCardGrid>
         {filtered.map(theme => {
-          return <Theme key={JSON.stringify(theme)} theme={theme} />;
+          const [name] = theme;
+          return <Theme key={name} theme={theme} />;
         })}
       </ThemeCardGrid>
     </div>
