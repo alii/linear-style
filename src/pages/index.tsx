@@ -62,5 +62,6 @@ export default function Index(props: IndexProps) {
 export const getStaticProps: GetStaticProps<IndexProps> = function () {
   return Promise.resolve({
     props: { themes },
+    revalidate: 60,
   });
 };
