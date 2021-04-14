@@ -7,7 +7,7 @@ export const ThemeCardOverlay = styled.div`
 export const ThemeCard = styled.div<{ dimmed: boolean; background: string }>`
   border-radius: 8px;
   padding: 15px;
-  border: 2px solid ${props => props.theme.colors.alternateBackground};
+  border: 1px solid ${props => props.theme.colors.alternateBackground};
   box-shadow: 0 10px 40px ${props => props.theme.colors.background};
   cursor: pointer;
   display: flex;

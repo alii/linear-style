@@ -7,6 +7,24 @@ export const GlobalStyle = createGlobalStyle`
       html { font-family: 'Inter var', sans-serif; }
     }
 
+    :root {
+      --bg: #F7F7F7;
+      --text: #2f2f2f;
+      --alt-bg: #DDDDDD;
+      --accent: #8327c9;
+      --input-bg: #ffffff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --text: #cccccc;
+        --alt-bg: #1b1c1d;
+        --accent: #848CD0;
+        --input-bg: #171717;
+      }
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,8 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      background: ${props => props.theme.colors.background};
-      color: ${props => props.theme.colors.text};
+      background: var(--bg);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       align-items: center;

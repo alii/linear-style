@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { ThemeCardGrid } from "../components/ThemeCard";
 import { useInputFilter, useLinearThemes } from "../core/hooks";
 import { Theme } from "../molecules/Theme";
 import { getBrightness } from "../core/utils";
 import { Title, Subtitle, LearnMore, Link } from "../components/Headers";
 import { SearchInput, SearchLabel } from "../components/SearchInput";
-import { GetStaticProps } from "next";
+import _themes from "../themes.json";
 
-import themes from "../themes.json";
+export default function Index() {
+  const { data: themes } = useLinearThemes(_themes);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
-type IndexProps = {
-  themes: Record<string, string>;
-};
+  useEffect(() => {
+    const focus = () => {
+      inputRef?.current.focus();
+    };
 
-export default function Index(props: IndexProps) {
-  const { data: themes } = useLinearThemes(props.themes);
+    document.addEventListener("keypress", focus);
+    return () => document.removeEventListener("keypress", focus);
+  }, []);
 
   const { state, setState, filtered } = useInputFilter((theme, i, s) => {
     const [name, colors] = theme;
@@ -58,10 +62,3 @@ export default function Index(props: IndexProps) {
     </div>
   );
 }
-
-export const getStaticProps: GetStaticProps<IndexProps> = function () {
-  return Promise.resolve({
-    props: { themes },
-    revalidate: 60,
-  });
-};

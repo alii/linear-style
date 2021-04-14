@@ -29,13 +29,15 @@ export const StyledNavbar = styled.div`
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
-    color: ${props => props.theme.colors.text}c0;
+    color: ${props => props.theme.colors.text};
     align-items: center;
-    transition: 200ms ease-out 0s;
+    transition: 100ms ease-out;
     margin: 0 10px;
+    opacity: 0.6;
 
     &:hover {
-      color: ${props => props.theme.colors.text}ff;
+      color: ${props => props.theme.colors.text};
+      opacity: 1;
     }
 
     svg {
