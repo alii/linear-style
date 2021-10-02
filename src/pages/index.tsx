@@ -42,7 +42,7 @@ export default function Index() {
       <Title>Linear Style</Title>
       <Subtitle>Click on a theme to copy it.</Subtitle>
       <LearnMore>
-        Learn more <Link href="https://github.com/alii/linear-style/blob/main/README.md">here.</Link>
+        Learn more <Link href="/about">here.</Link>
       </LearnMore>
       <SearchLabel>
         Tip: Search for "light" or "dark".
