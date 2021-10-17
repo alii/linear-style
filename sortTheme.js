@@ -1,4 +1,4 @@
-const theme = require('.src/theme.json');
+const theme = require('.src/themes.json');
 const fs = require("fs");
 
 const orderedTheme = Object.keys(theme).sort().reduce(
