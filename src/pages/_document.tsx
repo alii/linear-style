@@ -34,7 +34,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang={"en"}>
         <Head>
-          <title>Linear Style</title>
           <link rel="stylesheet" href={"https://rsms.me/inter/inter.css"} />
           <link rel={"icon"} href="https://static.linear.app/client/favicon.5430d743.ico" />
           <meta name={"theme-color"} content={"#5E6AD2"} />

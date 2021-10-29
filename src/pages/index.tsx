@@ -45,7 +45,7 @@ export default function Index() {
         Learn more <Link href="https://github.com/alii/linear-style/blob/main/README.md">here.</Link>
       </LearnMore>
       <SearchLabel>
-        Tip: Search for "light" or "dark".
+        Tip: Search for &quot;light&quot; or &quot;dark&quot;.
         <SearchInput
           type="text"
           value={state}

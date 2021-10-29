@@ -1,6 +1,3 @@
-import { IncomingMessage } from "http";
-import { NextApiRequestCookies } from "next/dist/next-server/server/api-utils";
-
 /**
  * Get the brightness of a hex code
  * @param color
