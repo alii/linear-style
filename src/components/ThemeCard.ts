@@ -4,14 +4,16 @@ export const ThemeCardOverlay = styled.div`
   position: relative;
 `;
 
-export const ThemeCard = styled.div.attrs<{ dimmed: boolean; background: string }>(p => {
+export type Props = { dimmed: boolean; background: string };
+
+export const ThemeCard = styled.div.attrs<Props>(p => {
   return {
     style: {
       background: `linear-gradient(130deg, ${p.background}2c, ${p.theme.colors.alternateBackground})`,
       opacity: p.dimmed ? 0.5 : 1,
     },
   };
-})`
+})<Props>`
   border-radius: 8px;
   padding: 15px;
   border: 1px solid ${props => props.theme.colors.alternateBackground};
