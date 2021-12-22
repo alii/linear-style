@@ -4,7 +4,14 @@ export const ThemeCardOverlay = styled.div`
   position: relative;
 `;
 
-export const ThemeCard = styled.div<{ dimmed: boolean; background: string }>`
+export const ThemeCard = styled.div.attrs<{ dimmed: boolean; background: string }>(p => {
+  return {
+    style: {
+      background: `linear-gradient(130deg, ${p.background}2c, ${p.theme.colors.alternateBackground})`,
+      opacity: p.dimmed ? 0.5 : 1,
+    },
+  };
+})`
   border-radius: 8px;
   padding: 15px;
   border: 1px solid ${props => props.theme.colors.alternateBackground};
@@ -13,8 +20,6 @@ export const ThemeCard = styled.div<{ dimmed: boolean; background: string }>`
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: linear-gradient(130deg, ${p => p.background}2c, ${props => props.theme.colors.alternateBackground});
-  opacity: ${({ dimmed }) => (dimmed ? 0.5 : 1)};
   transition: 0.2s opacity ease-out 0s, transform ease-out 0.2s;
 
   &:hover {
